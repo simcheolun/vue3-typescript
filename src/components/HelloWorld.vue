@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, onBeforeUnmount, onMounted, onUnmounted } from 'vue';
+import { onBeforeMount, onBeforeUnmount, onMounted, onUnmounted, onUpdated } from 'vue';
 import SimButton from './simButton.vue';
 import { ref } from 'vue'
 
@@ -10,28 +10,32 @@ defineProps<{
 /**
  * 변수선언 및 기본값 설정
  */
-let message = ref('abcde')
+let message = ref('ㅊㅇㄷㄷ')
 /**
  * 클릭이벤트에 사용되는 함수선언
  */
 function handlerClick() {
-  console.log(message)
   alert(message.value)
 }
 
-onBeforeUnmount(() => {
 
-})
-
+// destroyed 
 onUnmounted(() => {
+  console.log('컴포넌트가 언마운트되었습니다');
 })
 
 onBeforeMount(() => {
 
 })
 
+// created
 onMounted(() => {
+  console.log('컴포넌트가 마운트되었습니다');
+})
 
+// updated
+onUpdated(() => {
+  console.log('컴포넌트가 업데이트되었습니다');
 })
 </script>
 
