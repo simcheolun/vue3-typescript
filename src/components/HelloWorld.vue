@@ -3,8 +3,6 @@ import { onBeforeMount, onBeforeUnmount, onMounted, onUnmounted, onUpdated } fro
 import SimButton from './simButton.vue';
 import { ref } from 'vue'
 
-import Mybutton from 'vue3-ts-lib'
-components: { Mybutton }
 defineProps<{
   msg: string
 }>()
@@ -42,6 +40,8 @@ onUpdated(() => {
 </script>
 
 <template>
+  <MyButton type="button">ffffffffffffffff</MyButton>
+  <my-button>클릭</my-button>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
@@ -67,12 +67,11 @@ onUpdated(() => {
     <h3>
       <blockquote>Button Components - SIZE</blockquote>f
       <div class="components-area">
-        aaaa<Mybutton>ffffffffffffffff</Mybutton>dddd
         <SimButton round="5px" size="sm">PRIMARY-SM</SimButton>
         <SimButton round="5px" size="md">PRIMARY-MD</SimButton>
         <SimButton round="5px" size="lg">PRIMARY-LG</SimButton>
         <SimButton round="5px" size="xl">PRIMARY-XL</SimButton>
-  
+
       </div>
     </h3>
     <h3>
