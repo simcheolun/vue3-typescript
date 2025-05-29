@@ -40,9 +40,13 @@ onUpdated(() => {
 </script>
 
 <template>
-  <MyButton size="sm" >ffffffffffffffff</MyButton>
-  <my-button size="df">클릭</my-button>
-  <my-button size="lg">클릭</my-button>
+  <Vue3Button size="sm" type="primary">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="danger">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="warning">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="info">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="default">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="talk">ffffffffffffffff</Vue3Button>
+  <Vue3Button size="sm" type="success">ffffffffffffffff</Vue3Button>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>

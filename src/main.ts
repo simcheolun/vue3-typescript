@@ -9,9 +9,10 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
-import Vue3TsLib from 'vue3-ts-lib'
-// import  'vue3-ts-lib/main.scss'
-// import 'vue3-ts-lib'
+import Vue3UIExLib from 'vue3-uiex-lib'
+import 'vue3-uiex-lib/dist/style.css'
+
+
 /**
  * app
  */
@@ -20,7 +21,7 @@ const app = createApp(App)
 /**
  * 설정
  */
-app.use(Vue3TsLib)
+app.use(Vue3UIExLib)
 app.use(createPinia())
 app.use(router)
 
