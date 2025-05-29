@@ -40,8 +40,9 @@ onUpdated(() => {
 </script>
 
 <template>
-  <MyButton type="button">ffffffffffffffff</MyButton>
-  <my-button>클릭</my-button>
+  <MyButton size="sm" >ffffffffffffffff</MyButton>
+  <my-button size="df">클릭</my-button>
+  <my-button size="lg">클릭</my-button>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>

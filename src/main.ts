@@ -10,7 +10,8 @@ import App from './App.vue'
 import router from './router'
 
 import Vue3TsLib from 'vue3-ts-lib'
-import 'vue3-ts-lib'
+// import  'vue3-ts-lib/main.scss'
+// import 'vue3-ts-lib'
 /**
  * app
  */
