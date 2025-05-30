@@ -1,59 +1,87 @@
 <script setup lang="ts">
 import { onBeforeMount, onBeforeUnmount, onMounted, onUnmounted, onUpdated } from 'vue';
-import SimButton from './simButton.vue';
 import { ref } from 'vue'
+
+onUnmounted(() => { })
+
+onBeforeMount(() => { })
+
+onMounted(() => { })
+
+onUpdated(() => { })
 
 defineProps<{
   msg: string
 }>()
 
 /**
- * 변수선언 및 기본값 설정
- */
-let message = ref('ㅊㅇㄷㄷ')
-/**
  * 클릭이벤트에 사용되는 함수선언
  */
 function handlerClick() {
-  alert(message.value)
+  alert('Alert Message')
 }
 
 
-// destroyed 
-onUnmounted(() => {
-  console.log('컴포넌트가 언마운트되었습니다');
-})
+let size = ref('default')
+let sizes = [
+  'sm',
+  'default',
+  'lg'
+]
+let type = ref('default')
+let types = [
+  'default',
+  'primary',
+  'success',
+  'warning',
+  'danger',
+  'info',
+  'talk'
+]
+let circle = ref(false)
 
-onBeforeMount(() => {
-
-})
-
-// created
-onMounted(() => {
-  console.log('컴포넌트가 마운트되었습니다');
-})
-
-// updated
-onUpdated(() => {
-  console.log('컴포넌트가 업데이트되었습니다');
-})
 </script>
 
 <template>
-  <div style="display: flex;gap:10px;margin: 10px;">
-  
-  </div>
-  <div style="display: flex;gap:10px;margin: 10px;">
-    <Vue3Button size="sm" type="default">SMALL</Vue3Button>
-    <Vue3Button size="default" type="default">DEFAULT</Vue3Button>
-    <Vue3Button size="lg" type="default">LARGE</Vue3Button>
-  </div>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
+
     <h3>
-      <blockquote>Button Components - BASE</blockquote>
+      <blockquote>Button Components - Custom test</blockquote>
+      <div>
+        <select v-model="size">
+          <option v-for="item in sizes" :key="item">
+            {{ item }}
+          </option>
+        </select>
+        <select v-model="type">
+          <option v-for="item in types" :key="item">
+            {{ item }}
+          </option>
+        </select>
+
+        <label>
+          <input type="checkbox" v-model="circle" />circle
+        </label>
+      </div>
       <div class="components-area">
-        <Vue3Button size="default" type="primary">PRIMARY</Vue3Button>
+        <Vue3Button :size="size" :type="type" :circle="circle">PRIMARY</Vue3Button>
+      </div>
+      <pre class="components-code">
+        {{ `
+        <Vue3Button 
+          size="${size}"
+          type="${type}">
+          Button Label
+        </Vue3Button>`}}
+       </pre>
+    </h3>
+
+
+    <h3>
+      <blockquote>Button Components - Type</blockquote>
+      <div class="components-area">
+        <Vue3Button size="default" type="primary" ccc>PRIMARY</Vue3Button>
         <Vue3Button size="default" type="danger">DANGER</Vue3Button>
         <Vue3Button size="default" type="warning">WARNING</Vue3Button>
         <Vue3Button size="default" type="info">INFO</Vue3Button>
@@ -61,31 +89,94 @@ onUpdated(() => {
         <Vue3Button size="default" type="talk">TALK</Vue3Button>
         <Vue3Button size="default" type="success">SUCCESS</Vue3Button>
       </div>
-    </h3>
-    <h3>
-      <blockquote>Button Components - ROUND</blockquote>
-      <div class="components-area">
-  
-      </div>
-    </h3>
-    <h3>
-      <blockquote>Button Components - SIZE</blockquote>f
-      <div class="components-area">
-  
-  
-      </div>
-    </h3>
-    <h3>
-      <blockquote>Button Components - CODE</blockquote>
       <pre class="components-code">
-        {{ `<SimButton 
-          round="5px" 
-          type="success"
-          size="md">
-          SUCCESS
-        </SimButton>`}}
-                </pre>
+        {{ `
+        // type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'
+
+        <Vue3Button 
+          size="default"
+          type="default">
+          Button Label
+        </Vue3Button>`}}
+       </pre>
     </h3>
+    <h3>
+      <blockquote>Button Components - Round</blockquote>
+      <div class="components-area">
+        <Vue3Button size="default" type="success" round="5px">5PX</Vue3Button>
+        <Vue3Button size="default" type="success" round="10px">10PX</Vue3Button>
+        <Vue3Button size="default" type="success" round="15px">15px</Vue3Button>
+      </div>
+      <pre class="components-code">
+        {{ `
+        <Vue3Button size="default" type="success" round="5px">5PX</Vue3Button>
+        <Vue3Button size="default" type="success" round="10px">10px</Vue3Button>
+        <Vue3Button size="default" type="success" round="15px">15px</Vue3Button>`
+        }}
+       </pre>
+    </h3>
+    <h3>
+      <blockquote>Button Components - Circle</blockquote>
+      <div class="components-area">
+        <Vue3Button size="lg" :circle="true" :type="[
+          'default', 'primary', 'success', 'warning', 'danger', 'info', 'talk'
+        ][item]" v-for="item in [0, 1, 2, 3, 4, 5, 6]" :key="item">
+          {{ item }}
+        </Vue3Button>
+      </div>
+      <pre class="components-code">
+        {{ `
+        // circle?: true
+
+         <Vue3Button size="lg" 
+        :circle="true" 
+        :type="[
+          'default', 'primary','success','warning','danger','info','talk'
+          ][item]" 
+          v-for="item in [0,1,2,3,4,5,6]" 
+          :key="item">
+          \{\{item\}\}
+        </Vue3Button>`
+        }}
+       </pre>
+    </h3>
+    <h3>
+      <blockquote>Button Components - Size</blockquote>
+      <div class="components-area">
+        <Vue3Button size="sm" type="default">SMALL</Vue3Button>
+        <Vue3Button size="default" type="default">DEFAULT</Vue3Button>
+        <Vue3Button size="lg" type="default">LARGE</Vue3Button>
+      </div>
+      <pre class="components-code">
+        {{ `
+        // size?: 'sm' | 'default' | 'lg'
+
+        <Vue3Button size="sm" type="default">SMALL</Vue3Button>
+        <Vue3Button size="default" type="default">DEFAULT</Vue3Button>
+        <Vue3Button size="lg" type="default">LARGE</Vue3Button>`
+        }}
+       </pre>
+    </h3>
+    <h3>
+      <blockquote>Button Components - Event</blockquote>
+      <div class="components-area">
+        <Vue3Button size="default" type="default" @click="handlerClick">Alert Message</Vue3Button>
+      </div>
+      <pre class="components-code">
+        {{ `
+        <Vue3Button 
+          size="default"
+          type="default" 
+          @click="handlerClick">
+          Alert Message
+        </Vue3Button>
+        
+        function handlerClick(){ 
+          alert('Alert Message') 
+        }`}}
+       </pre>
+    </h3>
+
   </div>
 </template>
 
@@ -103,6 +194,7 @@ h3 {
 }
 
 blockquote {
+  display: flex;
   padding: 0 0.5em;
   border-left: .25em solid #d1d9e0;
   margin: 5px 0px;
@@ -112,16 +204,19 @@ blockquote {
 .components-area {
   margin-top: 15px;
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
 .components-code {
+  font-family: Consolas, 'Courier New', monospace;
+  margin-top: 10px;
   border: 0;
   color: #eee;
   background-color: #011627;
   padding: 20px;
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 
