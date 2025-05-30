@@ -40,55 +40,51 @@ onUpdated(() => {
 </script>
 
 <template>
-  <Vue3Button size="sm" type="primary">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="danger">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="warning">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="info">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="default">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="talk">ffffffffffffffff</Vue3Button>
-  <Vue3Button size="sm" type="success">ffffffffffffffff</Vue3Button>
+  <div style="display: flex;gap:10px;margin: 10px;">
+  
+  </div>
+  <div style="display: flex;gap:10px;margin: 10px;">
+    <Vue3Button size="sm" type="default">SMALL</Vue3Button>
+    <Vue3Button size="default" type="default">DEFAULT</Vue3Button>
+    <Vue3Button size="lg" type="default">LARGE</Vue3Button>
+  </div>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
       <blockquote>Button Components - BASE</blockquote>
       <div class="components-area">
-        <SimButton @click="handlerClick">PRIMARY</SimButton>
-        <SimButton type="info">INFO</SimButton>
-        <SimButton type="success">SUCCESS</SimButton>
-        <SimButton type="warning">WARNING</SimButton>
-        <SimButton type="yellow">YELLOW</SimButton>
+        <Vue3Button size="default" type="primary">PRIMARY</Vue3Button>
+        <Vue3Button size="default" type="danger">DANGER</Vue3Button>
+        <Vue3Button size="default" type="warning">WARNING</Vue3Button>
+        <Vue3Button size="default" type="info">INFO</Vue3Button>
+        <Vue3Button size="default" type="default">DEFAULT</Vue3Button>
+        <Vue3Button size="default" type="talk">TALK</Vue3Button>
+        <Vue3Button size="default" type="success">SUCCESS</Vue3Button>
       </div>
     </h3>
     <h3>
       <blockquote>Button Components - ROUND</blockquote>
       <div class="components-area">
-        <SimButton round="5px">PRIMARY</SimButton>
-        <SimButton round="5px" type="info">INFO</SimButton>
-        <SimButton round="5px" type="success">SUCCESS</SimButton>
-        <SimButton round="5px" type="warning">WARNING</SimButton>
-        <SimButton round="5px" type="yellow">YELLOW</SimButton>
+  
       </div>
     </h3>
     <h3>
       <blockquote>Button Components - SIZE</blockquote>f
       <div class="components-area">
-        <SimButton round="5px" size="sm">PRIMARY-SM</SimButton>
-        <SimButton round="5px" size="md">PRIMARY-MD</SimButton>
-        <SimButton round="5px" size="lg">PRIMARY-LG</SimButton>
-        <SimButton round="5px" size="xl">PRIMARY-XL</SimButton>
-
+  
+  
       </div>
     </h3>
     <h3>
       <blockquote>Button Components - CODE</blockquote>
       <pre class="components-code">
-    {{ `<SimButton 
-      round="5px" 
-      type="success"
-      size="md">
-      SUCCESS
-    </SimButton>`}}
-            </pre>
+        {{ `<SimButton 
+          round="5px" 
+          type="success"
+          size="md">
+          SUCCESS
+        </SimButton>`}}
+                </pre>
     </h3>
   </div>
 </template>
