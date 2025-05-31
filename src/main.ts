@@ -12,7 +12,6 @@ import router from './router'
 import Vue3UIExLib from 'vue3-uiex-lib'
 import 'vue3-uiex-lib/dist/style.css'
 
-
 /**
  * app
  */
