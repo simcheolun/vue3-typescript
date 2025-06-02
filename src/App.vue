@@ -7,7 +7,8 @@ import HelloWorld from './components/HelloWorld.vue';
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="Components sample" />
+      <!-- <HelloWorld msg="Components sample" /> -->
+      <Vue3Document/>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
