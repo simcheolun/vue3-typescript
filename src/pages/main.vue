@@ -1,6 +1,6 @@
 <template>
     <div class="main-page">
-        <Vue3Menu :menus="Menus" type="dark" width="200px" @sub-click="handleMenuClick" />
+        <Vue3Menu :menus="Menus" type="primary" width="200px" @sub-click="handleMenuClick" />
         <ButtonViews v-if="ActiveMenu == 'Vue3Button'" style="flex:1"/>
         <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1"/>
         <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1"/>

@@ -9,8 +9,7 @@
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="default" :type="item" v-for="(item,index) in types"
-                :key="index">
+            <Vue3Button size="default" :type="item" v-for="(item, index) in types" :key="index">
                 {{ item }}
             </Vue3Button>
         </div>
@@ -38,8 +37,7 @@
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="default" disabled :type="item" v-for="(item,index) in types"
-                :key="index">
+            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index">
                 {{ item }}
             </Vue3Button>
         </div>
@@ -69,8 +67,7 @@
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="lg" circle :type="item" :icon="icons[index]" v-for="(item,index) in types"
-                :key="index">
+            <Vue3Button size="lg" circle :type="item" :icon="icons[index]" v-for="(item, index) in types" :key="index">
             </Vue3Button>
         </div>
 
@@ -109,7 +106,7 @@ const icons = [
 
 <style scoped>
 .component-container {
-    width:100%;
+    width: 100%;
     margin-bottom: 50px;
 }
 
