@@ -5,23 +5,11 @@
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <Vue3RowSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Check v-model="modelData" type="..." label="checked"/>` }}
+                {{ `<Vue3Quote type="..."> label </Vue3Quote>` }}
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Check v-model="modelData1" v-for="(item, index) in types" :key="index" :type="item" :label="item" />
-        </div>
-
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Disabled</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
-        <Vue3Info content="disabled?: boolean > true" />
-        <Vue3RowSplit margin="5px" label="" />
-        <pre>
-                {{ `<Vue3Check v-model="modelData" disabled label="checked"/>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
-        <div class="buttons">
-            <Vue3Check disabled v-model="modelData1" v-for="(item, index) in types" :key="index" :type="item" :label="item" />
+            <Vue3Quote v-for="(item,index) in types" :key="index" :type="item">{{ item }}</Vue3Quote>
         </div>
 
         <Vue3RowSplit margin="20px" label="" />
@@ -36,7 +24,7 @@ const warningEn = `※ Warning: This library is distributed under the ISC Licens
 It is provided " AS IS", without any warranties of any kind. The user assumes full responsibility for any
 issues or damages that may arise from using this library. By using this library, you are considered to have
 read and agreed to the ISC License terms. `
-const modelData1 = ref(true)
+
 const types = [
     'default',
     'primary',
@@ -46,11 +34,20 @@ const types = [
     'info',
     'talk'
 ]
+const icons = [
+    'fas fa-square-plus',
+    'fas fa-image',
+    'fas fa-trash-can',
+    'fas fa-envelope-open',
+    'fas fa-file-lines',
+    'fas fa-pen-to-square',
+    'fas fa-star',
+]
 </script>
 
 <style scoped>
 .component-container {
-    width: 100%;
+    width:100%;
     margin-bottom: 50px;
 }
 

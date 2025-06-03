@@ -3,6 +3,8 @@
         <Vue3Menu :menus="Menus" type="dark" width="200px" @sub-click="handleMenuClick" />
         <ButtonViews v-if="ActiveMenu == 'Vue3Button'" style="flex:1"/>
         <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1"/>
+        <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1"/>
+        <QuoteViews v-if="ActiveMenu == 'Vue3Quote'" style="flex:1"/>
     </div>
 </template>
 
@@ -10,6 +12,8 @@
 import { ref } from 'vue';
 import ButtonViews from './buttons.vue'
 import CheckViews from './checkbox.vue'
+import RadioViews from './radio.vue'
+import QuoteViews from './quote.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
