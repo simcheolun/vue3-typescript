@@ -25,7 +25,7 @@
             <Vue3Radio disabled v-model="modelData" type="primary" :list="[labels[0]]" />
             <Vue3Radio disabled v-model="modelData" type="success" :list="[labels[0]]" />
             <Vue3Radio disabled v-model="modelData" type="warning" :list="[labels[0]]" />
-            <Vue3Radio disabled v-model="modelData" type="dangher" :list="[labels[0]]" />
+            <Vue3Radio disabled v-model="modelData" type="danger" :list="[labels[0]]" />
             <Vue3Radio disabled v-model="modelData" type="info" :list="[labels[0]]" />
             <Vue3Radio disabled v-model="modelData" type="talk" :list="[labels[0]]" />
         </div>
