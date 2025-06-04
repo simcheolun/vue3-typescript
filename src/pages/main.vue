@@ -5,6 +5,7 @@
         <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1"/>
         <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1"/>
         <QuoteViews v-if="ActiveMenu == 'Vue3Quote'" style="flex:1"/>
+        <InputViews v-if="ActiveMenu == 'Vue3Input'" style="flex:1"/>
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import ButtonViews from './buttons.vue'
 import CheckViews from './checkbox.vue'
 import RadioViews from './radio.vue'
 import QuoteViews from './quote.vue'
+import InputViews from './input.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -23,6 +25,7 @@ const Menus = [
             { label: 'Vue3Label', key: 'Vue3Label' },
             { label: 'Vue3Quote', key: 'Vue3Quote' },
             { label: 'Vue3Radio', key: 'Vue3Radio' },
+            { label: 'Vue3Input', key: 'Vue3Input' },
             { label: 'Vue3Select', key: 'Vue3Select', disabled: true },
             { label: 'Vue3Info', key: 'Vue3Info' },
         ]
