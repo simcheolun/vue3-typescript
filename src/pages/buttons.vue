@@ -37,7 +37,7 @@
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index">
+            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index"   @click="aaa">
                 {{ item }}
             </Vue3Button>
         </div>
@@ -60,10 +60,10 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Circle</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
-        <Vue3Info content="round?: string > '...'" />
+        <Vue3Info content="circle?: boolean" />
         <Vue3RowSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button round="0px">0px</Vue3Button>` }}
+                {{ `<Vue3Button circle></Vue3Button>` }}
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
@@ -102,6 +102,10 @@ const icons = [
     'fas fa-pen-to-square',
     'fas fa-star',
 ]
+
+function aaa(){
+    alert('aaa')
+}
 </script>
 
 <style scoped>
