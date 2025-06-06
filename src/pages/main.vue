@@ -7,6 +7,9 @@
         <QuoteViews v-if="ActiveMenu == 'Vue3Quote'" style="flex:1"/>
         <InputViews v-if="ActiveMenu == 'Vue3Input'" style="flex:1"/>
         <SelectViews v-if="ActiveMenu == 'Vue3Select'" style="flex:1"/>
+        <LabelViews v-if="ActiveMenu == 'Vue3Label'" style="flex:1"/>
+        <InfoViews v-if="ActiveMenu == 'Vue3Info'" style="flex:1"/>
+        <SplitViews v-if="ActiveMenu == 'Vue3Split'" style="flex:1"/>
     </div>
 </template>
 
@@ -18,6 +21,9 @@ import RadioViews from './radio.vue'
 import QuoteViews from './quote.vue'
 import InputViews from './input.vue'
 import SelectViews from './select.vue'
+import LabelViews from './label.vue'
+import InfoViews from './info.vue'
+import SplitViews from './split.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -30,6 +36,7 @@ const Menus = [
             { label: 'Vue3Input', key: 'Vue3Input' },
             { label: 'Vue3Select', key: 'Vue3Select' },
             { label: 'Vue3Info', key: 'Vue3Info' },
+            { label: 'Vue3Split', key: 'Vue3Split' },
         ]
     },
 ]
