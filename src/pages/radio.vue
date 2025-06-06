@@ -1,6 +1,6 @@
 <template>
     <div class="component-container">
-        <Vue3Quote type="default" style="margin-top: 5px;">Button Component - Type</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <Vue3RowSplit margin="5px" label="" />
@@ -12,7 +12,7 @@
             <Vue3Radio v-model="modelData" type="danger" :list="labels" />
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Disabled</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="disabled?: boolean > true" />
         <Vue3RowSplit margin="5px" label="" />
@@ -30,7 +30,7 @@
             <Vue3Radio disabled v-model="modelData" type="talk" :list="[labels[0]]" />
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Disabled</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="disabled?: boolean > true" />
         <Vue3RowSplit margin="5px" label="" />
@@ -72,7 +72,10 @@ const MultiLabels = [
 <style scoped>
 .component-container {
     width: 100%;
-    margin-bottom: 50px;
+    height: 100vh !important;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:50px;
 }
 
 pre {

@@ -1,6 +1,6 @@
 <template>
     <div class="component-container">
-        <Vue3Quote type="default" style="margin-top: 5px;">Button Component - Type</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <Vue3RowSplit margin="5px" label="" />
@@ -14,7 +14,7 @@
             </Vue3Button>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Size</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Size</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="size?: 'default' | 'sm' | 'lg'" />
         <Vue3RowSplit margin="5px" label="" />
@@ -28,7 +28,7 @@
             <Vue3Button size="lg">Large</Vue3Button>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Disabled</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="disabled?: boolean > true" />
         <Vue3RowSplit margin="5px" label="" />
@@ -37,12 +37,12 @@
             </pre>
         <Vue3RowSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index"   @click="aaa">
+            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index" @click="aaa">
                 {{ item }}
             </Vue3Button>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Round</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Round</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="round?: string > '...'" />
         <Vue3RowSplit margin="5px" label="" />
@@ -58,7 +58,7 @@
             <Vue3Button size="default" type="primary" round="15px">15px</Vue3Button>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Button Component - Circle</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Circle</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="circle?: boolean" />
         <Vue3RowSplit margin="5px" label="" />
@@ -91,7 +91,7 @@ const types = [
     'warning',
     'danger',
     'info',
-    'talk'
+    'talk',
 ]
 const icons = [
     'fas fa-square-plus',
@@ -103,7 +103,7 @@ const icons = [
     'fas fa-star',
 ]
 
-function aaa(){
+function aaa() {
     alert('aaa')
 }
 </script>
@@ -111,7 +111,10 @@ function aaa(){
 <style scoped>
 .component-container {
     width: 100%;
-    margin-bottom: 50px;
+    height: 100vh !important;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:50px;
 }
 
 pre {

@@ -59,6 +59,20 @@
             <Vue3Input type="text" width="200px" size="lg" placeholder="Large Textbox" />
         </div>
 
+        <Vue3Quote type="default" style="margin-top: 20px;">Textbox[text,password,number] Component - Border</Vue3Quote>
+        <Vue3RowSplit margin="5px" label="" />
+        <Vue3Info content="border?: none , default , primary , success , warning , danger , info , talk" />
+        <Vue3RowSplit margin="5px" label="" />
+        <pre>
+         {{ `<Vue3Input border="..."/>` }}
+         </pre>
+        <Vue3RowSplit margin="5px" label="" />
+        <div class="buttons">
+            <Vue3Input type="text" width="100px" size="default" border="none" :placeholder="item" />
+            <Vue3Input type="text" width="100px" size="default" :border="item" :placeholder="item" 
+            v-for="(item,index) in types" :key="index"/>
+        </div>
+
         <Vue3Quote type="default" style="margin-top: 20px;">Textbox[text,password,number] Component - disabled</Vue3Quote>
         <Vue3RowSplit margin="5px" label="" />
         <Vue3Info content="disabled?: boolean" />
@@ -118,6 +132,22 @@
             <Vue3Input type="number" width="200px" min="1" max="9999" comma placeholder="limit: 1 ~ 9,999 and comma" />
         </div>
 
+        <Vue3Quote type="default" style="margin-top: 20px;">Textbox[text,password,number] Component - align
+        </Vue3Quote>
+        <Vue3RowSplit margin="5px" label="" />
+        <Vue3Info content="align?: left , center , right" />
+        <Vue3RowSplit margin="5px" label="" />
+        <pre>
+         {{ `<Vue3Input align="..."/>` }}            
+                     
+         </pre>
+        <Vue3RowSplit margin="5px" label="" />
+        <div class="buttons">
+            <Vue3Input type="text" align="left" width="200px" placeholder="text" />
+            <Vue3Input type="password" align="center" width="200px" placeholder="password" />
+            <Vue3Input type="number" align="right" width="200px" min="1" max="9999" placeholder="number" />
+        </div>
+
         <Vue3RowSplit margin="20px" label="" />
         <Vue3Info :content="warningEn" />
 
@@ -146,7 +176,10 @@ const types = [
 <style scoped>
 .component-container {
     width: 100%;
-    margin-bottom: 50px;
+    height: 100vh !important;
+    overflow: hidden;
+    overflow-y: auto;
+    padding:50px;
 }
 
 pre {
