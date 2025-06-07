@@ -11,6 +11,8 @@
         <InfoViews v-if="ActiveMenu == 'Vue3Info'" style="flex:1"/>
         <SplitViews v-if="ActiveMenu == 'Vue3Split'" style="flex:1"/>
         <TableViews v-if="ActiveMenu == 'Vue3Table'" style="flex:1"/>
+        <GraphBarViews v-if="ActiveMenu == 'Vue3GraphBar'" style="flex:1"/>
+        <GraphBarVTViews v-if="ActiveMenu == 'Vue3GraphBarVT'" style="flex:1"/>
     </div>
 </template>
 
@@ -26,6 +28,8 @@ import LabelViews from './label.vue'
 import InfoViews from './info.vue'
 import SplitViews from './split.vue'
 import TableViews from './table.vue'
+import GraphBarViews from './graphbar.vue'
+import GraphBarVTViews from './graphbarVT.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -40,6 +44,8 @@ const Menus = [
             { label: 'Vue3Info', key: 'Vue3Info' },
             { label: 'Vue3Split', key: 'Vue3Split' },
             { label: 'Vue3Table', key: 'Vue3Table' },
+            { label: 'Vue3GraphBar', key: 'Vue3GraphBar' },
+            { label: 'Vue3GraphBarVT', key: 'Vue3GraphBarVT' },
         ]
     },
 ]
