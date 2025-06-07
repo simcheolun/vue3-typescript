@@ -1,53 +1,53 @@
 <template>
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3Label type="..." >label</Vue3Label>` }}
         </pre>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="">
             <Vue3Label v-for="(item, index) in types" :key="index" :type="item">{{ item }}</Vue3Label>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 5px;">Component - Text Case</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Text Case</Vue3Quote>
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="textCase?: 'default' | 'capi' | 'uppe'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3Label textCase="..." >label</Vue3Label>` }}
         </pre>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="">
             <Vue3Label v-for="(item, index) in types" :key="index" :type="item" textCase="capi">{{ item }}</Vue3Label>
         </div>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="">
             <Vue3Label v-for="(item, index) in types" :key="index" :type="item" textCase="uppe">{{ item }}</Vue3Label>
         </div>
 
 
-        <Vue3Quote type="default" style="margin-top: 5px;">Component - Size</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Size</Vue3Quote>
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="size?: 'sm' | 'default' | 'lg'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3Label textCase="..." >label</Vue3Label>` }}
         </pre>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="">
             <Vue3Label v-for="(item, index) in sizes" :key="index" :type="item" textCase="capi" :size="item">{{ item }}
             </Vue3Label>
         </div>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
 
 
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Ellips</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="ellipLines?: string | number" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3Label width="50px" ellipLines="1">this vue3 label</Vue3Label>` }}
             {{ `<Vue3Label width="150px" ellipLines="2">
@@ -56,7 +56,7 @@
                 this vue3 label<br>
             </Vue3Label>` }}
         </pre>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="">
             <Vue3Label width="50px" ellipLines="1">this vue3 label</Vue3Label>
             <Vue3Label width="150px" ellipLines="2">
@@ -65,11 +65,11 @@
                 this vue3 label<br>
             </Vue3Label>
         </div>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
 
 
 
-        <Vue3RowSplit margin="20px" label="" />
+        <Vue3RawSplit margin="20px" label="" />
         <Vue3Info :content="warningEn" />
 
     </div>

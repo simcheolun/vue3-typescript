@@ -1,13 +1,13 @@
 <template>
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button type='...' @click="..."></Vue3Button>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
+            {{ `<Vue3Button type='...'></Vue3Button>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Button size="default" :type="item" v-for="(item, index) in types" :key="index">
                 {{ item }}
@@ -15,13 +15,13 @@
         </div>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Size</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="size?: 'default' | 'sm' | 'lg'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button size='...'></Vue3Button>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
+            {{ `<Vue3Button size='...'></Vue3Button>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Button size="sm">Small</Vue3Button>
             <Vue3Button size="default">Default</Vue3Button>
@@ -29,13 +29,13 @@
         </div>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="disabled?: boolean > true" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button disabled></Vue3Button>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
+            {{ `<Vue3Button disabled></Vue3Button>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index" @click="aaa">
                 {{ item }}
@@ -43,13 +43,13 @@
         </div>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Round</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="round?: string > '...'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button round="0px">0px</Vue3Button>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
+            {{ `<Vue3Button round="0px">0px</Vue3Button>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Button size="default" type="primary" round="0px">0px</Vue3Button>
             <Vue3Button size="default" type="primary" round="3px">3px</Vue3Button>
@@ -59,19 +59,19 @@
         </div>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Circle</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="circle?: boolean" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
-                {{ `<Vue3Button circle></Vue3Button>` }}
-            </pre>
-        <Vue3RowSplit margin="5px" label="" />
+            {{ `<Vue3Button circle></Vue3Button>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Button size="lg" circle :type="item" :icon="icons[index]" v-for="(item, index) in types" :key="index">
             </Vue3Button>
         </div>
 
-        <Vue3RowSplit margin="20px" label="" />
+        <Vue3RawSplit margin="20px" label="" />
         <Vue3Info :content="warningEn" />
 
     </div>
@@ -114,7 +114,7 @@ function aaa() {
     height: 100vh !important;
     overflow: hidden;
     overflow-y: auto;
-    padding:50px;
+    padding: 50px;
 }
 
 pre {

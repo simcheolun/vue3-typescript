@@ -1,18 +1,18 @@
 <template>
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <pre>
                 {{ `<Vue3Quote type="..."> label </Vue3Quote>` }}
             </pre>
-        <Vue3RowSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Quote v-for="(item,index) in types" :key="index" :type="item">{{ item }}</Vue3Quote>
         </div>
 
-        <Vue3RowSplit margin="20px" label="" />
+        <Vue3RawSplit margin="20px" label="" />
         <Vue3Info :content="warningEn" />
 
     </div>
