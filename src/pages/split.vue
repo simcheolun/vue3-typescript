@@ -13,9 +13,32 @@
         <Vue3RowSplit margin="5px" label="" />
         <div>
             <Vue3Info style="margin-top: 5px;" width="100%" :content="conttent1"></Vue3Info>
-            <Vue3RowSplit margin="5px" label="2절" style="width: 250px;" color="#555" lineColor="#333" weight="1px" align="center" />
+            <Vue3RowSplit margin="5px" label="left" style="width: 250px;" color="#555" lineColor="#333" weight="1px"
+                align="left" />
+                <Vue3RowSplit margin="5px" label="center" style="width: 250px;" color="#555" lineColor="#333" weight="1px"
+                align="center" />
+                <Vue3RowSplit margin="5px" label="right" style="width: 250px;" color="#555" lineColor="#333" weight="1px"
+                align="right" />
             <Vue3Info style="margin-top: 5px;" width="100%" :content="conttent2"></Vue3Info>
         </div>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - Attributes</Vue3Quote>
+        <Vue3RowSplit margin="5px" label="" />
+        <Vue3Table :data="componentProfile" table-border="default" size="lg" hover th-border>
+            <Vue3TableColumn prop="keyword" label="keyword" align="left" />
+            <Vue3TableColumn prop="info" label="정보" align="left" />
+            <Vue3TableColumn prop="default" label="기본값" align="right" />
+
+        </Vue3Table>
+
+        <!-- <Vue3Table :data="componentProfile" table-border="default" size="lg" hover th-border>
+            <Vue3TableColumn prop="title" label="제목" align="left" />
+            <Vue3TableColumn prop="info" label="정보" />
+            <Vue3TableColumn prop="user" label="사용자" />
+            <Vue3TableColumn name="aaa" label="커스텀" />
+            <template #aaa="{ scope }">
+                <button>asdfasd</button>
+            </template>
+</Vue3Table> -->
 
 
         <Vue3RowSplit margin="20px" label="" />
@@ -31,6 +54,25 @@ It is provided " AS IS", without any warranties of any kind. The user assumes fu
 issues or damages that may arise from using this library. By using this library, you are considered to have
 read and agreed to the ISC License terms. `
 
+
+// label ?: string
+// color ?: string
+// align ?: string
+// lineColor ?: string
+// weight ?: string
+// margin ?: string
+// fontSize ?: string
+
+const componentProfile = [
+    { keyword: 'label', info: 'Label content', default: '--' },
+    { keyword: 'color', info: 'Label color', default: '#333' },
+    { keyword: 'align', info: 'Label position', default: 'center' },
+    { keyword: 'lineColor', info: 'Line color', default: '--' },
+    { keyword: 'weight', info: 'Line height', default: '1px' },
+    { keyword: 'margin', info: 'this top & bottom margin', default: '10px' },
+    { keyword: 'fontSize', info: 'label size', default: '14px' },
+
+]
 const conttent1 = ref(`
 성자신손 오백 년은 우리 황실이요
 산고수려 동반도는 우리 본국일세
