@@ -2,8 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - type</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="type?: default , primary , success , danger , info , talk" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="type?: default , primary , success , danger , info , talk" />
         <pre>
             {{ `<Vue3Info type="..."> this vue3 info panel </Vue3Info>` }}
         </pre>
@@ -12,10 +11,9 @@
             <Vue3Info style="margin-top: 5px;" v-for="(item, index) in types" :key="index" :type="item" width="100%" :content="item"></Vue3Info>
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 5px;">Component - width</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - width</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="width?: string" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="width?: string" />
         <pre>
             {{ `<Vue3Info width="150px"> this vue3 info panel </Vue3Info>` }}
         </pre>
@@ -26,8 +24,22 @@
             <Vue3Info style="margin-top: 5px;" width="100%" type="primary" :content="'100%'"></Vue3Info>
         </div>
 
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - round</Vue3Quote>
+        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="round?: string" />
+        <pre>
+            {{ `<Vue3Info round="5px"> this vue3 info panel </Vue3Info>` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
+        <div>
+            <Vue3Info round="5px" style="margin-top: 5px;" width="150px" type="primary" :content="'150px'"></Vue3Info>
+            <Vue3Info round="10px" style="margin-top: 5px;" width="200px" type="primary" :content="'200px'"></Vue3Info>
+            <Vue3Info round="15px" style="margin-top: 5px;" width="100%" type="primary" :content="'100%'"></Vue3Info>
+        </div>
+
+
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

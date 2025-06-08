@@ -2,8 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <pre>
                 {{ `<Vue3Quote type="..."> label </Vue3Quote>` }}
             </pre>
@@ -13,7 +12,7 @@
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

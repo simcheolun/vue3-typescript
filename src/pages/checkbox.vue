@@ -2,11 +2,10 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <pre>
-                {{ `<Vue3Check v-model="modelData" type="..." label="checked"/>` }}
-            </pre>
+            {{ `<Vue3Check v-model="modelData" type="..." label="checked"/>` }}
+        </pre>
         <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Check v-model="modelData1" v-for="(item, index) in types" :key="index" :type="item" :label="item" />
@@ -14,18 +13,17 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="disabled?: boolean > true" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="disabled?: boolean > true" />
         <pre>
-                {{ `<Vue3Check v-model="modelData" disabled label="checked"/>` }}
-            </pre>
+            {{ `<Vue3Check v-model="modelData" disabled label="checked"/>` }}
+        </pre>
         <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
             <Vue3Check disabled v-model="modelData1" v-for="(item, index) in types" :key="index" :type="item" :label="item" />
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

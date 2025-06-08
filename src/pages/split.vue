@@ -2,7 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Use info</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`label: string`" />
+        <Vue3Info type="primary" :content="`label: string`" />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ ` <Vue3RawSplit 
@@ -45,7 +45,7 @@
 
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info type="info" :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

@@ -2,7 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - example</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" content="Please refer to the code example." />
+        <Vue3Info type="primary" content="Please refer to the code example." />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `    let showDialog:boolean = ref(true)
@@ -12,6 +12,7 @@
                 beforeClose: true,
                 width: '600px',
                 height: '350px',
+                hiddenClose: false,
             })
             <Vue3Dialog v-model:show="showDialog" :options="dialogOptions">
                 v-movel:show = ${showDialog}
@@ -20,7 +21,7 @@
         <Vue3RawSplit margin="5px" label="" />
         <div>
             <Vue3Dialog v-model:show="showDialog" :options="dialogOptions">
-                content
+                content 0123456789
             </Vue3Dialog>
         </div>
         <Vue3Quote type="default" style="margin-top: 5px;">
@@ -29,7 +30,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - overay Style</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" content="overay: tans , moho , transMoho , none" />
+        <Vue3Info type="primary" content="overay: tans , moho , transMoho , none" />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `const dialogOptions = reactive({
@@ -44,38 +45,24 @@
         <Vue3RawSplit margin="5px" label="" />
         <div class="buttons" style="height:150px">
             <div style="width:33%;height:100%;position: relative;overflow: hidden;">
-                성자신손 오백 년은 우리 황실이요
-                산고수려 동반도는 우리 본국일세
-
-                애국하는 열심의기 북악같이 높고
-                충군하는 일편단심 동해같이 깊어
+                {{ TempContent }}
                 <div style="position: absolute; background-color: rgba(0, 0, 0, 0.5);width:100%;height:100%;top:0px;">
                 </div>
             </div>
             <div style="width:33%;height:100%;position: relative;overflow: hidden;">
-                성자신손 오백 년은 우리 황실이요
-                산고수려 동반도는 우리 본국일세
-
-                애국하는 열심의기 북악같이 높고
-                충군하는 일편단심 동해같이 깊어
-                <div style="position: absolute; backdrop-filter: saturate(180%) blur(5px);width:100%;height:100%;top:0px;">
+                {{ TempContent }}
+                <div
+                    style="position: absolute; backdrop-filter: saturate(180%) blur(5px);width:100%;height:100%;top:0px;">
                 </div>
             </div>
             <div style="width:33%;height:100%;position: relative;overflow: hidden;">
-                성자신손 오백 년은 우리 황실이요
-                산고수려 동반도는 우리 본국일세
-
-                애국하는 열심의기 북악같이 높고
-                충군하는 일편단심 동해같이 깊어
-                <div style="position: absolute; background-color: rgba(0, 0, 0, 0.5);backdrop-filter: saturate(180%) blur(5px);width:100%;height:100%;top:0px;">
+                {{ TempContent }}
+                <div
+                    style="position: absolute; background-color: rgba(0, 0, 0, 0.5);backdrop-filter: saturate(180%) blur(5px);width:100%;height:100%;top:0px;">
                 </div>
             </div>
             <div style="width:33%;height:100%;position: relative;overflow: hidden;">
-                성자신손 오백 년은 우리 황실이요
-                산고수려 동반도는 우리 본국일세
-
-                애국하는 열심의기 북악같이 높고
-                충군하는 일편단심 동해같이 깊어
+                {{ TempContent }}
                 <div style="position: absolute; width:100%;height:100%;top:0px;">
                 </div>
             </div>
@@ -91,7 +78,7 @@
         </Vue3Table>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info type="info" :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>
@@ -108,9 +95,15 @@ const componentOptions = [
     { name: 'overay', type: 'trans | moho | transMoho | none', default: 'trans', info: '오버레이 스타일' },
     { name: 'beforeClose', type: 'boolean', default: false, info: '오버레이클릭 창닫기' },
     { name: 'width', type: 'string', default: '500px', info: '창 너비' },
-    { name: 'height', type: 'string', default: '350px', info: '창 높이' }
+    { name: 'height', type: 'string', default: '350px', info: '창 높이' },
+    { name: 'hiddenClose', type: 'boolean', default: false, info: '닫기버튼 감춤' },
 ]
 
+const TempContent = `  성자신손 오백 년은 우리 황실이요
+                산고수려 동반도는 우리 본국일세
+
+                애국하는 열심의기 북악같이 높고
+                충군하는 일편단심 동해같이 깊어`
 
 const dialogOptions = reactive({
     round: '5px',
@@ -118,6 +111,7 @@ const dialogOptions = reactive({
     beforeClose: true,
     width: '600px',
     height: '350px',
+    hiddenClose: false,
 })
 
 let showDialog = ref(false)

@@ -2,7 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - options</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="disabled?: boolean > true" />
+        <Vue3Info type="primary" content="disabled?: boolean > true" />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3GraphBarVT height="15px" showInfo="" :options="[
@@ -20,7 +20,7 @@
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

@@ -2,8 +2,7 @@
     <div class="component-container">
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Type</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="type?: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'talk'" />
         <pre>
             {{ `<Vue3Button type='...'></Vue3Button>` }}
         </pre>
@@ -16,8 +15,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Size</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="size?: 'default' | 'sm' | 'lg'" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="size?: 'default' | 'sm' | 'lg'" />
         <pre>
             {{ `<Vue3Button size='...'></Vue3Button>` }}
         </pre>
@@ -30,8 +28,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="disabled?: boolean > true" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="disabled?: boolean > true" />
         <pre>
             {{ `<Vue3Button disabled></Vue3Button>` }}
         </pre>
@@ -44,8 +41,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Round</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="round?: string > '...'" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="round?: string > '...'" />
         <pre>
             {{ `<Vue3Button round="0px">0px</Vue3Button>` }}
         </pre>
@@ -60,8 +56,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Circle</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="circle?: boolean" />
-        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="circle?: boolean" />
         <pre>
             {{ `<Vue3Button circle></Vue3Button>` }}
         </pre>
@@ -72,7 +67,7 @@
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

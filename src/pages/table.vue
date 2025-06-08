@@ -3,7 +3,7 @@
 
         <Vue3Quote type="default" style="margin-top: 0px;">Component - table width</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`width: string`" />
+        <Vue3Info type="primary" :content="`width: string`" />
         <Vue3RawSplit margin="10px" />
         <Vue3Table :data="componentProfile" width="600px" >
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
@@ -17,7 +17,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Size</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`size: sm , default , lg`" />
+        <Vue3Info type="primary" :content="`size: sm , default , lg`" />
         <Vue3RawSplit margin="20px" label="small" lineColor="#ccc" />
         <Vue3Table :data="componentProfile" size="sm">
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
@@ -52,7 +52,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - hover</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`hover: boolean`" />
+        <Vue3Info type="primary" :content="`hover: boolean`" />
         <Vue3RawSplit margin="10px" />
         <Vue3Table :data="componentProfile" hover>
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
@@ -66,7 +66,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - border</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`tableBorder: default , all`" />
+        <Vue3Info type="primary" :content="`tableBorder: default , all`" />
         <Vue3RawSplit margin="10px" />
         <Vue3RawSplit margin="20px" label="default" lineColor="#ccc" />
         <Vue3Table :data="componentProfile">
@@ -93,7 +93,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - cellAlign</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`cellAlign: left , center , right`" />
+        <Vue3Info type="primary" :content="`cellAlign: left , center , right`" />
         <Vue3RawSplit margin="10px" />
         <Vue3Table :data="componentProfile" tableBorder="all">
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
@@ -118,9 +118,9 @@
             </template>
         </Vue3Table>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`Vue3TableColumn name = age`" />
+        <Vue3Info type="primary" :content="`Vue3TableColumn name = age`" />
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`template #age = { scope }`" />
+        <Vue3Info type="primary" :content="`template #age = { scope }`" />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `<Vue3Table :data="componentProfile" tableBorder="all">
@@ -133,7 +133,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - th bold</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`thBold: boolean`" />
+        <Vue3Info type="primary" :content="`thBold: boolean`" />
         <Vue3RawSplit margin="10px" />
         <Vue3Table :data="componentProfile" tableBorder="all" th-bold>
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
@@ -148,7 +148,7 @@
 
         
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info type="info" :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>

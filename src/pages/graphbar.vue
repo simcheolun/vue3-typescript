@@ -58,7 +58,7 @@
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info type="info" :content="warningEn" />
+        <Vue3Info type="primary" :content="warningEn" />
 
     </div>
 </template>
