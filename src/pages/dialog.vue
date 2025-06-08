@@ -85,7 +85,7 @@
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Table :data="componentOptions" tableBorder="all" th-bold>
             <Vue3TableColumn prop="name" label="Attributes" cellAlign="left" width="150px" />
-            <Vue3TableColumn prop="type" label="type" cellAlign="left" width="250px" />
+            <Vue3TableColumn prop="type" label="type" cellAlign="left" width="300px" />
             <Vue3TableColumn prop="default" label="Default" cellAlign="left" width="150px" />
             <Vue3TableColumn prop="info" label="Info" cellAlign="left" />
         </Vue3Table>
@@ -105,7 +105,7 @@ read and agreed to the ISC License terms. `
 
 const componentOptions = [
     { name: 'round', type: 'string', default: '0px', info: '모서리 둥글기' },
-    { name: 'overay', type: 'trans | moho | transMoho', default: 'trans', info: '오버레이 스타일' },
+    { name: 'overay', type: 'trans | moho | transMoho | none', default: 'trans', info: '오버레이 스타일' },
     { name: 'beforeClose', type: 'boolean', default: false, info: '오버레이클릭 창닫기' },
     { name: 'width', type: 'string', default: '500px', info: '창 너비' },
     { name: 'height', type: 'string', default: '350px', info: '창 높이' }
@@ -120,7 +120,7 @@ const dialogOptions = reactive({
     height: '350px',
 })
 
-let showDialog = ref(true)
+let showDialog = ref(false)
 
 function dialogSwitch() {
     showDialog.value = !showDialog.value
