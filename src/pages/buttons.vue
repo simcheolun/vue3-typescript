@@ -37,7 +37,7 @@
         </pre>
         <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index" @click="aaa">
+            <Vue3Button size="default" disabled :type="item" v-for="(item, index) in types" :key="index">
                 {{ item }}
             </Vue3Button>
         </div>

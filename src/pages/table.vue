@@ -133,7 +133,7 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - th bold</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="info" :content="`thBold: left , center , right`" />
+        <Vue3Info type="info" :content="`thBold: boolean`" />
         <Vue3RawSplit margin="10px" />
         <Vue3Table :data="componentProfile" tableBorder="all" th-bold>
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />

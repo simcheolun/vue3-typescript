@@ -1,26 +1,64 @@
 <template>
     <div class="component-container">
-        <Vue3Quote type="default" style="margin-top: 5px;">Component - options</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 5px;">Component - height</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info content="disabled?: boolean > true" />
+        <Vue3Info type="primary" content="height?: string" />
+        <pre>
+            {{ `<Vue3GraphBar height="15px" />` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
+        <div>
+            <Vue3GraphBar :options="[
+                { value: 960000, label: '매출', type: 'primary' },
+                { value: 700000, label: '수익', type: 'success' }]" />
+        </div>
+
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - showInfo</Vue3Quote>
+        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" content="showInfo?: boolean" />
+        <pre>
+            {{ `<Vue3GraphBar showInfo />` }}
+        </pre>
+        <Vue3RawSplit margin="5px" label="" />
+        <div>
+            <Vue3GraphBar showInfo :options="[
+                { value: 960000, label: '매출', type: 'primary' },
+                { value: 700000, label: '수익', type: 'success' }]" />
+        </div>
+
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - options Structure</Vue3Quote>
+        <Vue3RawSplit margin="5px" label="" />
+        <Vue3RawSplit margin="5px" label="" />
+        <Vue3Info type="primary" :content="`
+        options : [
+            {
+                value: string | number
+                label: string | number
+                type: primary , success , warning , danger , info , talk
+            }
+        ]
+        `" />
+
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - example</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
         <pre>
-            {{ `<Vue3GraphBar height="15px" showInfo="" :options="[
-                { value: 1560000, label: '매출', type: 'primary' },
+            {{ `const options = ref([
+                { value: 960000, label: '매출', type: 'primary' },
                 { value: 700000, label: '수익', type: 'success' },
                 { value: 500000, label: '세금', type: 'warning' },
                 { value: 500000, label: '차액', type: 'danger' },
                 { value: 250000, label: '공과금', type: 'info' },
-                { value: 150000, label: '급여', type: 'talk' },
-            ]" />`}}
+                { value: 450000, label: '급여', type: 'talk' },
+            ])
+            <Vue3GraphBar showInfo height="25px" :options="options" />`}}
         </pre>
         <Vue3RawSplit margin="5px" label="" />
         <div class="button s">
-            <Vue3GraphBar  height="15px" :options="options" />
+            <Vue3GraphBar showInfo height="25px" :options="options" />
         </div>
 
         <Vue3RawSplit margin="20px" label="" />
-        <Vue3Info :content="warningEn" />
+        <Vue3Info type="info" :content="warningEn" />
 
     </div>
 </template>
