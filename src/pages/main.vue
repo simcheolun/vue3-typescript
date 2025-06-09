@@ -14,6 +14,7 @@
         <GraphBarViews v-if="ActiveMenu == 'Vue3GraphBar'" style="flex:1"/>
         <DialogViews v-if="ActiveMenu == 'Vue3Dialog'" style="flex:1"/>
         <CalendarFunctionViews v-if="ActiveMenu == 'Vue3CalendarData'" style="flex:1"/>
+        <CalendarViews v-if="ActiveMenu == 'Vue3Calendar'" style="flex:1"/>
     </div>
 </template>
 
@@ -33,6 +34,7 @@ import GraphBarViews from './graphbar.vue'
 import GraphBarVTViews from './graphbarVT.vue'
 import DialogViews from './dialog.vue'
 import CalendarFunctionViews from './calendarFunction.vue'
+import CalendarViews from './calendar.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -50,6 +52,7 @@ const Menus = [
             { label: 'Vue3GraphBar', key: 'Vue3GraphBar' },
             { label: 'Vue3Dialog', key: 'Vue3Dialog' },
             { label: 'Vue3CalendarData', key: 'Vue3CalendarData' },
+            { label: 'Vue3Calendar', key: 'Vue3Calendar' },
         ]
     },
 ]

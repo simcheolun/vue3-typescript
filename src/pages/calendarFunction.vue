@@ -45,18 +45,23 @@ const calendarInfo = ref([]);
 calendarInfo.value = Vue3CalendarData(2025, 1);
 console.log('Calendar Info', calendarInfo.value)
 
-const Solar2Lunar = Vue3Solar2Lunar(2025, 12, 3)
+const Solar2Lunar = Vue3Solar2Lunar(1977,11,7)
+console.log('Solar2Lunar', Solar2Lunar)
 const Solar2LunarString = `{
   lYear: 2025,           // 음력 년
     lMonth: 10,            // 음력 월
     lDay: 14,              // 음력 일
     animal: "뱀",          // 십이지 동물 띠 (뱀띠)
     cYear: "二〇二五年",     // 한자 년도
-    cMonth: "九月",         // 한자 월
+    cMonth: "十月",         // 한자 월
     cDay: "十四",           // 한자 일
     nYear: 2025,           // 양력 년
     nMonth: 12,            // 양력 월
     nDay: 3,               // 양력 일
+    kDay: "열나흘"          // 한글 음력 일
+    kMonth: "십월"          // 한글 음력 월
+    kWeek: "수요일"         // 한글 음력 요일
+    kYear: "이공이오년"     // 한글 음력 년
     gzYear: "을사",        // 간지(천간지지) 년
     gzMonth: "정해",       // 간지 월
     gzDay: "병오",         // 간지 일
@@ -83,7 +88,7 @@ const Solar2LunarString = `{
 }`
 
 const Lunar2Solar = Vue3Lunar2Solar(1977, 9,26)
-console.log(Lunar2Solar)
+console.log('Lunar2Solar', Lunar2Solar)
 const Lunar2SolarStr = ` {
     lYear: 2025,           // 음력 년
         lMonth: 1,             // 음력 월
