@@ -32,8 +32,8 @@ It is provided " AS IS", without any warranties of any kind. The user assumes fu
 issues or damages that may arise from using this library. By using this library, you are considered to have
 read and agreed to the ISC License terms. `
 const calendarOptions = ref({
-  y: new Date().getFullYear(),
-  m: new Date().getMonth()+1,
+  y: 2025 , //new Date().getFullYear(),
+  m: 6 //new Date().getMonth()+1,
 })
 const types = [
   'default',
