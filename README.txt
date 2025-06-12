@@ -9,3 +9,10 @@ git push -u origin main
 git remote add origin https://github.com/simcheolun/vue3-typescript.git
 git branch -M main
 git push -u origin main
+
+
+
+# 빌드 및 빌드후 리뷰
+
+npm run build
+npm run preview
