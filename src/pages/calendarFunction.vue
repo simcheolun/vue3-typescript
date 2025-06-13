@@ -43,10 +43,8 @@ read and agreed to the ISC License terms. `
 
 const calendarInfo = ref([]);
 calendarInfo.value = Vue3CalendarData(2025, 1);
-console.log('Calendar Info', calendarInfo.value)
 
 const Solar2Lunar = Vue3Solar2Lunar(1977,11,7)
-console.log('Solar2Lunar', Solar2Lunar)
 const Solar2LunarString = `{
   lYear: 2025,           // 음력 년
     lMonth: 10,            // 음력 월
