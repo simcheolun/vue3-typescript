@@ -86,7 +86,6 @@ const Solar2LunarString = `{
 }`
 
 const Lunar2Solar = Vue3Lunar2Solar(1977, 9,26)
-console.log('Lunar2Solar', Lunar2Solar)
 const Lunar2SolarStr = ` {
     lYear: 2025,           // 음력 년
         lMonth: 1,             // 음력 월
