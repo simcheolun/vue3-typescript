@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/vue3-typescript/',
   server: {
     port: 1818, // 원하는 포트 번호로 변경
   },
