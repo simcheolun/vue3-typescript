@@ -36,10 +36,7 @@
 <script lang="ts" setup>
 import { ref } from "vue"
 import { Vue3CalendarData, Vue3Solar2Lunar, Vue3Lunar2Solar } from 'vue3-uiex-light-ts';
-const warningEn = `※ Warning: This library is distributed under the ISC License and complies with its terms.
-It is provided " AS IS", without any warranties of any kind. The user assumes full responsibility for any
-issues or damages that may arise from using this library. By using this library, you are considered to have
-read and agreed to the ISC License terms. `
+const warningEn = ``
 
 const calendarInfo = ref([]);
 calendarInfo.value = Vue3CalendarData(2025, 1);

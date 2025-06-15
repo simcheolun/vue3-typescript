@@ -83,10 +83,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from "vue"
-const warningEn = `※ Warning: This library is distributed under the ISC License and complies with its terms.
-It is provided " AS IS", without any warranties of any kind. The user assumes full responsibility for any
-issues or damages that may arise from using this library. By using this library, you are considered to have
-read and agreed to the ISC License terms. `
+const warningEn = ``
 
 const componentOptions = [
     { name: 'round', type: 'string', default: '0px', info: '모서리 둥글기' },

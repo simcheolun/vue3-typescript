@@ -30,7 +30,6 @@
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - example</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="primary" content="disabled?: boolean > true" />
         <pre>
             {{ `<Vue3Radio v-model="modelData" type="primary" :list="[
                 { type: 'Male' },
@@ -50,10 +49,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue"
-const warningEn = `※ Warning: This library is distributed under the ISC License and complies with its terms.
-It is provided "AS IS", without any warranties of any kind. The user assumes full responsibility for any
-issues or damages that may arise from using this library. By using this library, you are considered to have
-read and agreed to the ISC License terms. `
+const warningEn = ``
 const modelData = ref('Male')
 const labels = [
     'Male',

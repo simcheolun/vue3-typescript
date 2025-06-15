@@ -1,6 +1,7 @@
 <template>
     <div class="main-page">
         <Vue3Menu :menus="Menus" type="primary" width="200px" @sub-click="handleMenuClick" />
+        <GuideViews v-if="ActiveMenu == 'Guide'" style="flex:1"/>
         <ButtonViews v-if="ActiveMenu == 'Vue3Button'" style="flex:1"/>
         <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1"/>
         <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1"/>
@@ -35,10 +36,12 @@ import GraphBarVTViews from './graphbarVT.vue'
 import DialogViews from './dialog.vue'
 import CalendarFunctionViews from './calendarFunction.vue'
 import CalendarViews from './calendar.vue'
+import GuideViews from './guide.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
         list: [
+            { label: 'Guide', key: 'Guide' },
             { label: 'Vue3Button', key: 'Vue3Button' },
             { label: 'Vue3Check', key: 'Vue3Check' },
             { label: 'Vue3Label', key: 'Vue3Label' },

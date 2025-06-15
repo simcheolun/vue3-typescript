@@ -8,7 +8,7 @@
         </pre>
         <Vue3RawSplit margin="5px" label="" />
         <div class="buttons">
-            <Vue3Check v-model="modelData1" v-for="(item, index) in types" :key="index" :type="item" :label="item" />
+            <Vue3Check v-model="modelData1" v-for="(item, index) in types " :key="index" :type="item" :label="item" />
         </div>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
@@ -30,10 +30,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue"
-const warningEn = `※ Warning: This library is distributed under the ISC License and complies with its terms.
-It is provided " AS IS", without any warranties of any kind. The user assumes full responsibility for any
-issues or damages that may arise from using this library. By using this library, you are considered to have
-read and agreed to the ISC License terms. `
+const warningEn = ``
 const modelData1 = ref(true)
 const types = [
     'default',
