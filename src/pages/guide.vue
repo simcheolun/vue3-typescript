@@ -49,7 +49,8 @@
             Vue3GraphBar
             Vue3Dialog
             Vue3CalendarData
-            Vue3Calendar` }}
+            Vue3Calendar
+            Vue3HoverLens` }}
         </pre>
 
         <Vue3RawSplit margin="20px" label="" />
