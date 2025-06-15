@@ -61,14 +61,14 @@ const optionsView = `
 const calendarOptions = ref({
     y: 2025,
     m: 6,
-    lunar: true,
-    memorial: true,
-    holiday: true,
-    term: true,
-    dateController: true,
-    sMemorial: [                            //커스텀 기념일 양력
+    lunar: true,                            // 음력 컨트롤러
+        memorial: true,                         // 양력 컨트롤러
+        holiday: true,                          // 연휴,명절 컨트롤러
+        term: true,                             // 절기 컨트롤러
+        dateController: true,                   // 날자 컨트롤러
+        sMemorial: [                            //커스텀 기념일 양력
         {
-        day: "2025-6-2",
+                day: "2025-6-2",
         label: "나의 기념일(양력)",
                 info: "미숙이가 태어난 날.",
                 color: '#ff5533'
@@ -76,7 +76,7 @@ const calendarOptions = ref({
     ],
     lMemorial: [                           //커스텀 기념일 음력
         {
-        day: "2025-5-8",
+                day: "2025-5-8",
         label: "나의 기념일(음력)",
                 info: "성숙이가 탄생한 날.",
                 color: "#0000ff"
