@@ -315,8 +315,9 @@ data value:
             Vue3GraphBar
             Vue3Dialog
             Vue3CalendarData
-            Vue3Calendar`)+`
-        `,-1)),u(o,{margin:"20px",label:""}),u(r,{type:"primary",content:_p})])}}}),Vp=Re(wp,[["__scopeId","data-v-3456a5b4"]]),Cp={class:"component-container"},Sp={class:"buttons"},kp="",Tp=ne({__name:"hoverLens",setup(e){return(t,n)=>{const l=H("Vue3Quote"),o=H("Vue3RawSplit"),r=H("Vue3Info"),s=H("Vue3HoverLens");return v(),T("div",Cp,[u(l,{type:"default",style:{"margin-top":"5px"}},{default:R(()=>n[0]||(n[0]=[A("Component - Type")])),_:1}),u(o,{margin:"5px",label:""}),u(r,{type:"primary",content:`
+            Vue3Calendar
+            Vue3HoverLens`)+`
+        `,-1)),u(o,{margin:"20px",label:""}),u(r,{type:"primary",content:_p})])}}}),Vp=Re(wp,[["__scopeId","data-v-fd4b7928"]]),Cp={class:"component-container"},Sp={class:"buttons"},kp="",Tp=ne({__name:"hoverLens",setup(e){return(t,n)=>{const l=H("Vue3Quote"),o=H("Vue3RawSplit"),r=H("Vue3Info"),s=H("Vue3HoverLens");return v(),T("div",Cp,[u(l,{type:"default",style:{"margin-top":"5px"}},{default:R(()=>n[0]||(n[0]=[A("Component - Type")])),_:1}),u(o,{margin:"5px",label:""}),u(r,{type:"primary",content:`
         src:string
         options:{
             scale:number,
