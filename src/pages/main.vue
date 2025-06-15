@@ -60,7 +60,7 @@ const Menus = [
     },
 ]
 
-let ActiveMenu = ref('Vue3Button')
+let ActiveMenu = ref('Guide')
 function handleMenuClick(data: any) {
     ActiveMenu.value = data
 }
