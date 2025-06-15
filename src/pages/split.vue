@@ -3,7 +3,6 @@
         <Vue3Quote type="default" style="margin-top: 5px;">Component - Use info</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Info type="primary" :content="`label: string`" />
-        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ ` <Vue3RawSplit 
                 margin="5px" 

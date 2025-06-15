@@ -5,7 +5,7 @@
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Info type="primary" :content="`width: string`" />
         <Vue3RawSplit margin="10px" />
-        <Vue3Table :data="componentProfile" width="600px" >
+        <Vue3Table :data="componentProfile" width="600px">
             <Vue3TableColumn prop="seq" label="Id" cellAlign="left" width="150px" />
             <Vue3TableColumn prop="name" label="Name" cellAlign="left" />
             <Vue3TableColumn prop="sex" label="Sex" cellAlign="left" width="150px" />
@@ -113,8 +113,12 @@
             <Vue3TableColumn prop="name" label="Name" cellAlign="center" />
             <Vue3TableColumn prop="sex" label="Sex" cellAlign="right" width="150px" />
             <Vue3TableColumn name="age" label="Age" cellAlign="right" width="150px" />
+            <Vue3TableColumn name="def" label="def" cellAlign="center" width="50px" />
             <template #age="{ scope }">
-            18
+                <Vue3Input placeholder="input Age" />
+            </template>
+            <template #def="{ scope }">
+                <Vue3Button type="success">Edit</Vue3Button>
             </template>
         </Vue3Table>
         <Vue3RawSplit margin="5px" label="" />
@@ -123,13 +127,13 @@
         <Vue3Info type="primary" :content="`template #age = { scope }`" />
         <Vue3RawSplit margin="5px" label="" />
         <pre>
-            {{ `<Vue3Table :data="componentProfile" tableBorder="all">
-            <Vue3TableColumn name="age" label="Age"/>
-            <template #age="{ scope }">
+    {{ `<Vue3Table :data="componentProfile" tableBorder="all">
+        <Vue3TableColumn name="age" label="Age" />
+        <template #age="{ scope }">
             18
             </template>
-        </Vue3Table>` }}
-        </pre>
+    </Vue3Table>` }}
+</pre>
 
         <Vue3Quote type="default" style="margin-top: 20px;">Component - th bold</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
@@ -142,11 +146,11 @@
         </Vue3Table>
         <Vue3RawSplit margin="5px" label="" />
         <pre>
-            {{ `<Vue3Table thBold>...</Vue3Table>` }}
-            {{ `<Vue3Table th-bold>...</Vue3Table>` }}
-        </pre>
+    {{ `<Vue3Table thBold>...</Vue3Table>` }}
+    {{ `<Vue3Table th-bold>...</Vue3Table>` }}
+</pre>
 
-        
+
         <Vue3RawSplit margin="20px" label="" />
         <Vue3Info type="primary" :content="warningEn" />
 

@@ -3,7 +3,6 @@
         <Vue3Quote type="default" style="margin-top: 5px;">Component - example</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Info type="primary" content="Please refer to the code example." />
-        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `    let showDialog:boolean = ref(true)
                 const dialogOptions = reactive({
@@ -31,7 +30,6 @@
         <Vue3Quote type="default" style="margin-top: 20px;">Component - overay Style</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Info type="primary" content="overay: tans , moho , transMoho , none" />
-        <Vue3RawSplit margin="5px" label="" />
         <pre>
             {{ `const dialogOptions = reactive({
                 ...

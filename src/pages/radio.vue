@@ -28,7 +28,7 @@
             <Vue3Radio disabled v-model="modelData" type="talk" :list="[labels[0]]" />
         </div>
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Component - Disabled</Vue3Quote>
+        <Vue3Quote type="default" style="margin-top: 20px;">Component - example</Vue3Quote>
         <Vue3RawSplit margin="5px" label="" />
         <Vue3Info type="primary" content="disabled?: boolean > true" />
         <pre>
