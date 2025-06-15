@@ -1,21 +1,22 @@
 <template>
     <div class="main-page">
         <Vue3Menu :menus="Menus" type="primary" width="200px" @sub-click="handleMenuClick" />
-        <GuideViews v-if="ActiveMenu == 'Guide'" style="flex:1"/>
-        <ButtonViews v-if="ActiveMenu == 'Vue3Button'" style="flex:1"/>
-        <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1"/>
-        <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1"/>
-        <QuoteViews v-if="ActiveMenu == 'Vue3Quote'" style="flex:1"/>
-        <InputViews v-if="ActiveMenu == 'Vue3Input'" style="flex:1"/>
-        <SelectViews v-if="ActiveMenu == 'Vue3Select'" style="flex:1"/>
-        <LabelViews v-if="ActiveMenu == 'Vue3Label'" style="flex:1"/>
-        <InfoViews v-if="ActiveMenu == 'Vue3Info'" style="flex:1"/>
-        <SplitViews v-if="ActiveMenu == 'Vue3Split'" style="flex:1"/>
-        <TableViews v-if="ActiveMenu == 'Vue3Table'" style="flex:1"/>
-        <GraphBarViews v-if="ActiveMenu == 'Vue3GraphBar'" style="flex:1"/>
-        <DialogViews v-if="ActiveMenu == 'Vue3Dialog'" style="flex:1"/>
-        <CalendarFunctionViews v-if="ActiveMenu == 'Vue3CalendarData'" style="flex:1"/>
-        <CalendarViews v-if="ActiveMenu == 'Vue3Calendar'" style="flex:1"/>
+        <GuideViews v-if="ActiveMenu == 'Guide'" style="flex:1" />
+        <ButtonViews v-if="ActiveMenu == 'Vue3Button'" style="flex:1" />
+        <CheckViews v-if="ActiveMenu == 'Vue3Check'" style="flex:1" />
+        <RadioViews v-if="ActiveMenu == 'Vue3Radio'" style="flex:1" />
+        <QuoteViews v-if="ActiveMenu == 'Vue3Quote'" style="flex:1" />
+        <InputViews v-if="ActiveMenu == 'Vue3Input'" style="flex:1" />
+        <SelectViews v-if="ActiveMenu == 'Vue3Select'" style="flex:1" />
+        <LabelViews v-if="ActiveMenu == 'Vue3Label'" style="flex:1" />
+        <InfoViews v-if="ActiveMenu == 'Vue3Info'" style="flex:1" />
+        <SplitViews v-if="ActiveMenu == 'Vue3Split'" style="flex:1" />
+        <TableViews v-if="ActiveMenu == 'Vue3Table'" style="flex:1" />
+        <GraphBarViews v-if="ActiveMenu == 'Vue3GraphBar'" style="flex:1" />
+        <DialogViews v-if="ActiveMenu == 'Vue3Dialog'" style="flex:1" />
+        <CalendarFunctionViews v-if="ActiveMenu == 'Vue3CalendarData'" style="flex:1" />
+        <CalendarViews v-if="ActiveMenu == 'Vue3Calendar'" style="flex:1" />
+        <HoverLens v-if="ActiveMenu == 'Vue3HoverLens'" style="flex:1" />
     </div>
 </template>
 
@@ -37,6 +38,7 @@ import DialogViews from './dialog.vue'
 import CalendarFunctionViews from './calendarFunction.vue'
 import CalendarViews from './calendar.vue'
 import GuideViews from './guide.vue'
+import HoverLens from './hoverLens.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -56,6 +58,7 @@ const Menus = [
             { label: 'Vue3Dialog', key: 'Vue3Dialog' },
             { label: 'Vue3CalendarData', key: 'Vue3CalendarData' },
             { label: 'Vue3Calendar', key: 'Vue3Calendar' },
+            { label: 'Vue3HoverLens', key: 'Vue3HoverLens' },
         ]
     },
 ]
@@ -77,6 +80,4 @@ body {
     display: flex;
     gap: 10px;
 }
-
-
 </style>
