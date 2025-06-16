@@ -17,6 +17,7 @@
         <CalendarFunctionViews v-if="ActiveMenu == 'Vue3CalendarData'" style="flex:1" />
         <CalendarViews v-if="ActiveMenu == 'Vue3Calendar'" style="flex:1" />
         <HoverLens v-if="ActiveMenu == 'Vue3HoverLens'" style="flex:1" />
+        <backTopViews v-if="ActiveMenu == 'Vue3BackTop'" style="flex:1" />
     </div>
 </template>
 
@@ -39,6 +40,7 @@ import CalendarFunctionViews from './calendarFunction.vue'
 import CalendarViews from './calendar.vue'
 import GuideViews from './guide.vue'
 import HoverLens from './hoverLens.vue'
+import backTopViews from './backTop.vue'
 const Menus = [
     {
         item: { label: 'Components', key: 'components', icon: 'fas fa-square-check' },
@@ -59,6 +61,7 @@ const Menus = [
             { label: 'Vue3CalendarData', key: 'Vue3CalendarData' },
             { label: 'Vue3Calendar', key: 'Vue3Calendar' },
             { label: 'Vue3HoverLens', key: 'Vue3HoverLens' },
+            { label: 'Vue3BackTop', key: 'Vue3BackTop' },
         ]
     },
 ]
