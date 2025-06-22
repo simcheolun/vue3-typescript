@@ -1,48 +1,56 @@
 <template>
-    <div class="component-container">
-        <Vue3Quote type="default" style="margin-top: 5px;">Component - 지정월의 모든 날 및 공휴 및 기념일 (1 ~ 말일)</Vue3Quote>
-        <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="primary" content="Vue3CalendarData(y:number,m:number)" />
-        <pre>
-            {{ `//JavaStript
-            console.log('Calendar Info',Vue3Solar2Lunar(2025,11)` }}
-        </pre>
-        <Vue3Info type="primary" :content="``" />
-        <Vue3RawSplit margin="5px" label="" />
+  <div class="component-container">
+    <Vue3Quote type="default" style="margin-top: 5px"
+      >Component - 지정월의 모든 날 및 공휴 및 기념일 (1 ~ 말일)</Vue3Quote
+    >
+    <Vue3RawSplit margin="5px" label="" />
+    <Vue3Info type="primary" content="Vue3CalendarData(y:number,m:number)" />
+    <pre>
+            {{
+        `//JavaStript
+            console.log('Calendar Info',Vue3Solar2Lunar(2025,11)`
+      }}
+        </pre
+    >
+    <Vue3Info type="primary" :content="``" />
+    <Vue3RawSplit margin="5px" label="" />
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Component - 양력 > 음력</Vue3Quote>
-        <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="primary" content="Vue3CalendarData(y:number,m:numberd:number)" />
-        <pre>
-            {{ `//JavaStript
-            console.log(Vue3Solar2Lunar(2025,12,3))` }}
-        </pre>
-        <Vue3Info type="primary" :content="Solar2LunarString" />
+    <Vue3Quote type="default" style="margin-top: 20px">Component - 양력 > 음력</Vue3Quote>
+    <Vue3RawSplit margin="5px" label="" />
+    <Vue3Info type="primary" content="Vue3CalendarData(y:number,m:numberd:number)" />
+    <pre>
+            {{
+        `//JavaStript
+            console.log(Vue3Solar2Lunar(2025,12,3))`
+      }}
+        </pre
+    >
+    <Vue3Info type="primary" :content="Solar2LunarString" />
 
-        <Vue3Quote type="default" style="margin-top: 20px;">Component - 음력 > 양력</Vue3Quote>
-        <Vue3RawSplit margin="5px" label="" />
-        <Vue3Info type="primary" content="Vue3Lunar2Solar(y:number,m:numberd:number)" />
-        <pre>
-            {{ `//JavaStript
-            console.log(Vue3Lunar2Solar(2025,1,1))` }}
-        </pre>
-        <Vue3Info type="primary" :content="Lunar2SolarStr" />
-
-
-
-    </div>
+    <Vue3Quote type="default" style="margin-top: 20px">Component - 음력 > 양력</Vue3Quote>
+    <Vue3RawSplit margin="5px" label="" />
+    <Vue3Info type="primary" content="Vue3Lunar2Solar(y:number,m:numberd:number)" />
+    <pre>
+            {{
+        `//JavaStript
+            console.log(Vue3Lunar2Solar(2025,1,1))`
+      }}
+        </pre
+    >
+    <Vue3Info type="primary" :content="Lunar2SolarStr" />
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
-import { Vue3CalendarData, Vue3Solar2Lunar, Vue3Lunar2Solar } from 'vue3-uiex-light-ts';
-const warningEn = ``
+  import { ref } from 'vue'
+  import { Vue3CalendarData, Vue3Solar2Lunar, Vue3Lunar2Solar } from 'vue3-uiex-light-ts'
+  const warningEn = ``
 
-const calendarInfo = ref([]);
-calendarInfo.value = Vue3CalendarData(2025, 1);
+  const calendarInfo = ref([])
+  calendarInfo.value = Vue3CalendarData(2025, 1)
 
-const Solar2Lunar = Vue3Solar2Lunar(1977,11,7)
-const Solar2LunarString = `{
+  const Solar2Lunar = Vue3Solar2Lunar(1977, 11, 7)
+  const Solar2LunarString = `{
   lYear: 2025,           // 음력 년
     lMonth: 10,            // 음력 월
     lDay: 14,              // 음력 일
@@ -82,8 +90,8 @@ const Solar2LunarString = `{
     lMemorialDay: []       // 음력 기념일 배열
 }`
 
-const Lunar2Solar = Vue3Lunar2Solar(1977, 9,26)
-const Lunar2SolarStr = ` {
+  const Lunar2Solar = Vue3Lunar2Solar(1977, 9, 26)
+  const Lunar2SolarStr = ` {
     lYear: 2025,           // 음력 년
         lMonth: 1,             // 음력 월
         lDay: 1,               // 음력 일
@@ -115,24 +123,24 @@ const Lunar2SolarStr = ` {
 </script>
 
 <style scoped>
-.component-container {
+  .component-container {
     width: 100%;
     height: 100vh !important;
     overflow: hidden;
     overflow-y: auto;
     padding: 50px;
-}
+  }
 
-pre {
+  pre {
     font-family: Consolas, 'Courier New', monospace;
     background-color: #011627;
     color: #f4d03f;
     padding-top: 20px;
-}
+  }
 
-.buttons {
+  .buttons {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+  }
 </style>

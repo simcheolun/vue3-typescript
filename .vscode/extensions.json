@@ -5,6 +5,17 @@
     "ms-playwright.playwright",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "cweijan.vetur-plus",
+    "ducksoupdev.vue2",
+    "ecmel.vscode-html-css",
+    "formulahendry.code-runner",
+    "hollowtree.vue-snippets",
+    "mohd-akram.vscode-html-format",
+    "ms-ceintl.vscode-language-pack-ko",
+    "ms-vscode.live-server",
+    "ritwickdey.liveserver",
+    "sdras.vue-vscode-snippets",
+    "simonsiefke.svg-preview"
   ]
 }

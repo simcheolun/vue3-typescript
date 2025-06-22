@@ -1,9 +1,24 @@
-[*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,vue,css,scss,sass,less,styl}]
+root = true
+
+[*]
 charset = utf-8
-indent_size = 2
-indent_style = space
+end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
 
-end_of_line = lf
-max_line_length = 100
+[*.{js,jsx,ts,tsx,vue}]
+indent_size = 2
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{py}]
+indent_size = 4
+
+[Makefile]
+indent_style = tab
